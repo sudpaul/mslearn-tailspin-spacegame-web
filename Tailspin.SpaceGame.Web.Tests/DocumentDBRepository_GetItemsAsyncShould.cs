@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
+using System.IO
 using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
@@ -35,7 +35,9 @@ namespace Tests
             const int MAX_RESULTS = 10; // sample up to 10 results
 
             // Form the query predicate.
+
             // This expression selects all scores for the provided game region.
+
             Func<Score, bool> queryPredicate = score => (score.GameRegion == gameRegion);
 
             // Fetch the scores.
@@ -70,5 +72,6 @@ namespace Tests
             // Verify that we received the specified number of items.
             return scores.Count();
         }
+
     }
 }
